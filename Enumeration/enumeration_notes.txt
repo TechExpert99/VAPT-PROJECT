@@ -1,0 +1,60 @@
+# ============================================================
+# VAPT Project — Enumeration Notes
+# ============================================================
+
+FTP ENUMERATION (Port 21)
+--------------------------
+Command: ftp 192.168.128.166
+Username: anonymous
+Password: (blank)
+Result: 230 Login successful
+Server: vsFTPd 2.3.4
+System: UNIX Type: L8
+Features: EPRT EPSV MDTM PASV REST STREAM SIZE TVFS UTF8
+
+TELNET ENUMERATION (Port 23)
+------------------------------
+Command: telnet 192.168.128.166
+Username: msfadmin
+Password: msfadmin
+Result: Login successful
+Kernel: Linux metasploitable 2.6.24-16-server #1 SMP Thu Apr 10 13:58:00 UTC 2008 i686
+Note: Credentials advertised in banner
+
+SMB ENUMERATION (Ports 139/445)
+---------------------------------
+Command: enum4linux -a 192.168.128.166
+Tool version: v0.9.1
+Workgroup: WORKGROUP
+Domain SID: NULL SID (anonymous access)
+NULL session: ALLOWED
+Usernames found: administrator, guest, krbtgt, domain admins, root, bin, none
+NetBIOS hostname: METASPLOITABLE
+Services: Workstation, Messenger, File Server
+
+HTTP ENUMERATION (Port 80)
+----------------------------
+Command: nikto -h 192.168.128.166
+Nikto version: v2.6.0
+Server: Apache/2.2.8 (Ubuntu) DAV/2
+PHP version: 5.2.4-2ubuntu5.10
+Findings:
+  - PHP 5.2.4 outdated (EOL 2011)
+  - Apache 2.2.8 outdated (EOL 2018)
+  - phpMyAdmin at /phpMyAdmin/
+  - phpinfo.php exposed (CWE-552)
+  - HTTP TRACE enabled (XST risk)
+  - Directory indexing: /icons/, /doc/, /test/
+  - 5 security headers missing
+  - 4 PHP Easter Egg URLs
+  - phpMyAdmin ChangeLog exposed (CVE-2003-1418)
+
+MYSQL ENUMERATION (Port 3306)
+-------------------------------
+Command: nmap --script mysql-info 192.168.128.166 -p 3306
+Version: MySQL 5.0.51a-3ubuntu5
+Protocol: 10
+Thread ID: 9
+Capabilities: Support41Auth, SwitchToSSLAfterHandshake, SupportsTransactions
+Status: Autocommit
+Salt: BFyRjADo$bEp&iJyj&{\

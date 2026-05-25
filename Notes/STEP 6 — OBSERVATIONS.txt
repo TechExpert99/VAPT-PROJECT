@@ -1,0 +1,15 @@
+STEP 6 — OBSERVATIONS
+
+Successfully exploited the Samba service using the usermap_script vulnerability.
+
+The exploit provided unauthorized command shell access to the target system.
+
+--------------------------------------------------
+
+STEP 7 — OBSERVATIONS
+
+Successfully exploited the UnrealIRCd backdoor vulnerability using Metasploit Framework.
+
+The exploit established a meterpreter session and demonstrated remote code execution capabilities on the target system.
+
+The assessment confirmed multiple critical vulnerabilities present on the target machine.

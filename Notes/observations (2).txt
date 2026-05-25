@@ -1,0 +1,9 @@
+STEP 2 — Host Discovery
+
+Performed host discovery scan using Nmap on the subnet 192.168.128.0/24.
+
+Active hosts identified:
+- Windows 11 Home
+- Metasploitable 2
+
+The scan successfully detected reachable systems within the virtual lab environment.

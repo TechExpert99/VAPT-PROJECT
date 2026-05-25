@@ -1,0 +1,14 @@
+STEP 4 — OBSERVATIONS
+
+Performed detailed service enumeration and vulnerability analysis on the target system.
+
+The assessment identified several insecure configurations and exposed services including:
+
+- Anonymous FTP authentication
+- Exposed SMB information
+- Outdated Apache and PHP versions
+- Enabled HTTP TRACE method
+- Publicly accessible MySQL service
+- Telnet service using default credentials
+
+The target system demonstrated multiple high-risk vulnerabilities suitable for penetration testing exercises.

@@ -1,0 +1,20 @@
+SMB ENUMERATION
+
+Target:
+192.168.128.166
+
+Command:
+enum4linux -a 192.168.128.166
+
+Objective:
+Enumerate SMB services, users, workgroup information, and session permissions.
+
+Findings:
+- Workgroup identified: WORKGROUP
+- NetBIOS names discovered
+- Anonymous session access allowed
+- Multiple usernames identified
+- SMB services exposed publicly
+
+Security Risk:
+Anonymous SMB enumeration may allow attackers to gather sensitive information about the target system.

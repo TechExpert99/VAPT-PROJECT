@@ -1,0 +1,22 @@
+CRITICAL VULNERABILITIES IDENTIFIED
+
+1. VSFTPD 2.3.4 Backdoor Vulnerability
+Severity: Critical
+
+2. Samba usermap_script Vulnerability
+Severity: Critical
+
+3. UnrealIRCd Backdoor Vulnerability
+Severity: Critical
+
+4. Default Credentials Enabled
+Severity: Critical
+
+5. Anonymous FTP Access
+Severity: Medium
+
+6. HTTP TRACE Method Enabled
+Severity: Medium
+
+7. Outdated Apache and PHP Versions
+Severity: High

@@ -1,0 +1,15 @@
+Ping Connectivity Test
+
+Command:
+ping 192.168.128.162
+
+Description:
+Used to verify communication between Kali Linux and Windows 11.
+
+--------------------------------------------------
+
+Command:
+ping 192.168.128.166
+
+Description:
+Used to verify communication between Kali Linux and Metasploitable 2.

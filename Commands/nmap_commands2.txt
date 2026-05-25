@@ -1,0 +1,46 @@
+# ============================================================
+# VAPT Project — Nmap Commands Reference
+# Target: Metasploitable 2 — 192.168.128.166
+# Attacker: Kali Linux — 192.168.128.164
+# ============================================================
+
+# PHASE 2 — RECONNAISSANCE
+# -------------------------------------------------------
+# Ping sweep — discover all live hosts on subnet
+nmap -sn 192.168.128.0/24
+
+# PHASE 3 — PORT SCANNING
+# -------------------------------------------------------
+# Quick TCP SYN stealth scan
+nmap -sS 192.168.128.166
+
+# Full port scan with service version detection (all 65535 ports)
+nmap -sS -sV -p- 192.168.128.166 -oN metasploitable_service_scan.txt
+
+# Aggressive scan — OS detection + scripts + traceroute
+nmap -A -T4 192.168.128.166 -oN metasploitable_OS_scan.txt
+
+# Windows 11 quick scan
+nmap -sS -sV 192.168.128.162
+
+# PHASE 4 — ENUMERATION
+# -------------------------------------------------------
+# MySQL service info probe
+nmap --script mysql-info 192.168.128.166 -p 3306
+
+# PHASE 5 — VULNERABILITY ASSESSMENT
+# -------------------------------------------------------
+# Full vulnerability script scan
+nmap --script vuln 192.168.128.166
+
+# vsftpd backdoor check (CVE-2011-2523)
+nmap --script ftp-vsftpd-backdoor 192.168.128.166
+
+# SMB vulnerability check
+nmap --script smb-vuln-ms08-067 192.168.128.166
+
+# MySQL empty password check
+nmap --script mysql-empty-password 192.168.128.166 -p 3306
+
+# UnrealIRCd backdoor check (CVE-2010-2075)
+nmap --script irc-unrealircd-backdoor 192.168.128.166 -p 6667

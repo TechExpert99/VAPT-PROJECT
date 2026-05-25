@@ -1,0 +1,9 @@
+STEP 5 — OBSERVATIONS
+
+Successfully exploited the vulnerable vsftpd 2.3.4 FTP service using Metasploit Framework.
+
+The exploit established a meterpreter session and provided unauthorized shell access to the target system.
+
+Root-level privileges were successfully confirmed using the 'whoami' command.
+
+The assessment demonstrated the security risks associated with outdated and vulnerable FTP services.

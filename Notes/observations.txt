@@ -1,0 +1,49 @@
+# ============================================================
+# VAPT Project — Security Observations
+# ============================================================
+
+PHASE 3 — PORT SCANNING OBSERVATIONS
+-------------------------------------------------------
+- 26 open ports discovered on Metasploitable 2
+- vsftpd 2.3.4 on port 21 — known backdoored version
+- Telnet on port 23 — unencrypted, default creds advertised
+- Samba 3.X-4.X on 139/445 — NULL session likely
+- MySQL 5.0.51a on 3306 — direct network exposure
+- UnrealIRCd on 6667/6697 — known backdoor version
+- Port 1524 — intentional root bindshell
+- Apache 2.2.8 + PHP 5.2.4 — both end-of-life
+
+PHASE 4 — ENUMERATION OBSERVATIONS
+-------------------------------------------------------
+- FTP anonymous login CONFIRMED (response 230)
+- vsftpd 2.3.4 banner disclosed in FTP response
+- Telnet login SUCCESS: msfadmin/msfadmin
+- Kernel: Linux 2.6.24-16-server (April 2008) — 17+ years old
+- SMB NULL session CONFIRMED — no credentials needed
+- Usernames harvested: administrator, guest, krbtgt, domain admins, root, bin, none
+- Nikto found 14 web vulnerabilities including phpMyAdmin at /phpMyAdmin/
+- phpinfo.php exposed — full server config visible
+- PHP 5.2.4 and Apache 2.2.8 both outdated/EOL
+- MySQL probe succeeded — version 5.0.51a, salt exposed
+
+PHASE 6 — EXPLOITATION OBSERVATIONS
+-------------------------------------------------------
+- Exploit 1: vsftpd_234_backdoor — Meterpreter session, whoami=root
+- Post-exploit: uid=0(root) gid=0(root) CONFIRMED
+- Kernel: Linux metasploitable 2.6.24-16-server i686 GNU/Linux
+- /etc/passwd: 30+ accounts including msfadmin, postgres, mysql, tomcat55
+- /var/www: dvwa, mutillidae, phpMyAdmin, phpinfo.php, tikiwiki, twiki
+- netstat: port 6200 (vsftpd backdoor) + 1524 (bindshell) both LISTEN
+- Exploit 2: usermap_script — Command shell, full filesystem ls /
+- Exploit 3: unreal_ircd_3281_backdoor — Meterpreter session opened
+
+PHASE 7 — TRAFFIC ANALYSIS OBSERVATIONS
+-------------------------------------------------------
+- 2,493 packets captured on eth0
+- SYN scan: 1,003 SYN-only packets (42.4%) — Nmap fingerprint visible
+- Window=1024 confirms Nmap -sS signature
+- RST,ACK responses confirm closed ports
+- SYN,ACK responses confirm open ports (80, 21 seen)
+- FTP stream 1003: USER anonymous + PASS anonymous in plain text ASCII
+- FTP session: 227 bytes total, 4 client / 7 server packets
+- NetBIOS Browser Election broadcasts visible from 192.168.128.166

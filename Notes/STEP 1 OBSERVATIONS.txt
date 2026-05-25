@@ -1,0 +1,7 @@
+STEP 1 OBSERVATIONS
+
+- Successfully configured a virtual penetration testing lab.
+- Verified communication between all systems.
+- Observed Windows Firewall blocking ICMP requests initially.
+- Enabled ICMP echo rule for controlled testing purposes.
+- Confirmed stable VMware NAT network connectivity.

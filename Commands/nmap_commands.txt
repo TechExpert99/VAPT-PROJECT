@@ -1,0 +1,7 @@
+Host Discovery Scan
+
+Command:
+nmap -sn 192.168.128.0/24
+
+Description:
+Used to identify active hosts in the virtual lab environment.

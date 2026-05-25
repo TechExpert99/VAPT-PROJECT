@@ -1,0 +1,59 @@
+# ============================================================
+# VAPT Project — Network Information
+# ============================================================
+
+LAB NETWORK
+-----------
+Subnet:    192.168.128.0/24
+Netmask:   255.255.255.0
+Type:      VMware Host-only (isolated)
+
+MACHINES
+--------
+Kali Linux (Attacker)
+  IP:  192.168.128.164
+  OS:  Kali Linux 2024.x
+  MAC: 00:0c:29:30:ef:2f (VMware)
+  Role: Attacker / Assessment Platform
+
+Metasploitable 2 (Primary Target)
+  IP:  192.168.128.166
+  OS:  Ubuntu 8.04 Linux (kernel 2.6.24)
+  MAC: 00:0c:29:52:29:76 (VMware)
+  Role: Primary vulnerable target
+  Hostname: metasploitable.localdomain
+  Domain: irc.Metasploitable.LAN
+
+Windows 11 Home (Secondary Target)
+  IP:  192.168.128.162
+  OS:  Windows 11 Home
+  Role: Enumeration and exposure analysis
+
+OPEN PORTS — METASPLOITABLE 2
+------------------------------
+21/tcp   FTP       vsftpd 2.3.4
+22/tcp   SSH       OpenSSH 4.7p1 Debian 8ubuntu1
+23/tcp   Telnet    Linux telnetd
+25/tcp   SMTP      Postfix smtpd
+53/tcp   DNS       ISC BIND 9.4.2
+80/tcp   HTTP      Apache httpd 2.2.8 (Ubuntu) DAV/2
+111/tcp  RPC       rpcbind 2
+139/tcp  NetBIOS   Samba smbd 3.X-4.X
+445/tcp  SMB       Samba smbd 3.X-4.X
+512/tcp  exec      netkit-rsh rexecd
+513/tcp  login     OpenBSD rlogind
+514/tcp  shell     tcpwrapped
+1099/tcp RMI       GNU Classpath grmiregistry
+1524/tcp shell     Metasploitable root shell (bindshell)
+2049/tcp NFS       2-4 (RPC #100003)
+2121/tcp FTP       ProFTPD 1.3.1
+3306/tcp MySQL     MySQL 5.0.51a-3ubuntu5
+3632/tcp distccd   distccd v1 (GNU) 4.2.4
+5432/tcp PostgreSQL PostgreSQL DB 8.3.0-8.3.7
+5900/tcp VNC       VNC protocol 3.3
+6000/tcp X11       X11 (access denied)
+6667/tcp IRC       UnrealIRCd
+6697/tcp IRC-SSL   UnrealIRCd
+8009/tcp AJP       Apache Jserv Protocol v1.3
+8180/tcp HTTP      Apache Tomcat/Coyote JSP engine 1.1
+8787/tcp DRb       Ruby DRb RMI (Ruby 1.8)

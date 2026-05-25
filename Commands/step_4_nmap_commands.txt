@@ -1,0 +1,11 @@
+STEP 4 — ENUMERATION COMMANDS
+
+enum4linux -a 192.168.128.166
+
+nikto -h 192.168.128.166
+
+nmap --script mysql-info 192.168.128.166 -p 3306
+
+ftp 192.168.128.166
+
+telnet 192.168.128.166

@@ -1,0 +1,19 @@
+NETWORK CONFIGURATION
+
+Attacker Machine:
+Kali Linux
+IP: 192.168.128.164
+
+Victim Machine:
+Windows 11 Home
+IP: 192.168.128.162
+
+Vulnerable Machine:
+Metasploitable 2
+IP: 192.168.128.166
+
+Network Type:
+VMware NAT Network
+
+Connectivity Status:
+All systems successfully communicated through ICMP ping requests.

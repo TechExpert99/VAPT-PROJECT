@@ -1,0 +1,15 @@
+KEY FINDINGS
+
+1. Multiple unnecessary services were exposed publicly.
+
+2. Outdated software versions were detected on critical services.
+
+3. FTP service (vsftpd 2.3.4) is known for historical vulnerabilities.
+
+4. Telnet service was enabled, which is considered insecure due to plaintext communication.
+
+5. SMB and RPC services were exposed, increasing attack surface.
+
+6. Database services such as MySQL and PostgreSQL were accessible.
+
+7. The target system demonstrated a large attack surface suitable for penetration testing exercises.

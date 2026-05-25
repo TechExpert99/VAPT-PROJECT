@@ -1,0 +1,25 @@
+IDENTIFIED VULNERABILITIES
+
+1. Anonymous FTP Access
+Severity: Medium
+
+2. Telnet Service Enabled
+Severity: High
+
+3. Default Credentials (msfadmin/msfadmin)
+Severity: Critical
+
+4. HTTP TRACE Method Enabled
+Severity: Medium
+
+5. Outdated Apache Version
+Severity: High
+
+6. Missing Security Headers
+Severity: Medium
+
+7. Publicly Exposed MySQL Service
+Severity: Medium
+
+8. SMB Information Disclosure
+Severity: Medium

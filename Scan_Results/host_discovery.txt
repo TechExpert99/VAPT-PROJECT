@@ -1,0 +1,14 @@
+# Nmap ping sweep — Phase 2 Reconnaissance
+# Command: nmap -sn 192.168.128.0/24
+# Date: 2026-05-21
+
+Starting Nmap 7.98 ( https://nmap.org )
+Nmap scan report for 192.168.128.162 — Host is up
+Nmap scan report for 192.168.128.164 — Host is up
+Nmap scan report for 192.168.128.166 — Host is up
+Nmap done: 256 IP addresses (3 hosts up)
+
+Active Hosts:
+192.168.128.162  Windows 11 Home     (Secondary Target)
+192.168.128.164  Kali Linux          (Attacker)
+192.168.128.166  Metasploitable 2    (Primary Target)

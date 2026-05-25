@@ -1,0 +1,29 @@
+STEP 3 — PORT SCANNING & SERVICE DETECTION
+
+1. Basic TCP Port Scan
+
+Command:
+nmap 192.168.128.166
+
+Description:
+Performed a basic TCP scan to identify open ports and exposed services on the target system.
+
+--------------------------------------------------
+
+2. SYN Scan
+
+Command:
+nmap -sS 192.168.128.166
+
+Description:
+Performed a TCP SYN stealth scan to identify open ports efficiently.
+
+--------------------------------------------------
+
+3. Service Version Detection
+
+Command:
+nmap -sV 192.168.128.166 -oN metasploitable_service_scan2.txt
+
+Description:
+Performed service version detection to identify running services and software versions on the target system.

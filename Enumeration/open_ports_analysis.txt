@@ -1,0 +1,17 @@
+OPEN PORT ANALYSIS
+
+21/tcp  - FTP
+22/tcp  - SSH
+23/tcp  - Telnet
+25/tcp  - SMTP
+53/tcp  - DNS
+80/tcp  - HTTP
+139/tcp - NetBIOS
+445/tcp - SMB
+3306/tcp - MySQL
+5432/tcp - PostgreSQL
+5900/tcp - VNC
+6667/tcp - IRC
+
+Analysis:
+The target machine exposed multiple network services, significantly increasing the available attack surface. Several services were running outdated versions that may contain known vulnerabilities.

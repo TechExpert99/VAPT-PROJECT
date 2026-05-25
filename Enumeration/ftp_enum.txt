@@ -1,0 +1,17 @@
+FTP ENUMERATION
+
+Target:
+192.168.128.166
+
+Command:
+ftp 192.168.128.166
+
+Objective:
+Test FTP authentication security.
+
+Findings:
+- Anonymous FTP login allowed
+- Directory listing accessible
+
+Security Risk:
+Anonymous FTP access may expose sensitive files to unauthorized users.

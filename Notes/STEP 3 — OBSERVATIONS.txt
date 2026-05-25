@@ -1,0 +1,28 @@
+STEP 3 — OBSERVATIONS
+
+Performed multiple Nmap scans on the Metasploitable 2 target system.
+
+The scans identified numerous open ports and exposed services, indicating a highly vulnerable environment designed for penetration testing practice.
+
+Detected services included:
+- FTP
+- SSH
+- Telnet
+- SMTP
+- DNS
+- HTTP
+- SMB
+- MySQL
+- PostgreSQL
+- VNC
+- IRC
+- NFS
+
+Service version detection identified outdated software versions such as:
+- vsftpd 2.3.4
+- Apache httpd 2.2.8
+- Samba smbd 3.X
+- UnrealIRCd
+- ProFTPD 1.3.1
+
+Several services appeared outdated and potentially vulnerable to known exploits.

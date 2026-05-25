@@ -1,0 +1,18 @@
+MYSQL ENUMERATION
+
+Target:
+192.168.128.166
+
+Command:
+nmap --script mysql-info 192.168.128.166 -p 3306
+
+Objective:
+Gather MySQL service information and protocol details.
+
+Findings:
+- MySQL version 5.0.51a identified
+- MySQL service accessible remotely
+- Database service exposed publicly
+
+Security Risk:
+Exposed database services may allow unauthorized access or database attacks if weak credentials exist.

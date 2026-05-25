@@ -1,0 +1,25 @@
+WEB ENUMERATION
+
+Target:
+192.168.128.166
+
+Command:
+nikto -h 192.168.128.166
+
+Objective:
+Identify web server vulnerabilities and insecure configurations.
+
+Findings:
+- Apache/2.2.8 detected
+- PHP/5.2.4 detected
+- Directory indexing enabled
+- HTTP TRACE method enabled
+- Missing security headers
+- phpMyAdmin discovered
+- Outdated Apache version identified
+
+Security Risks:
+- Outdated Apache and PHP versions may contain known vulnerabilities.
+- HTTP TRACE method may allow Cross-Site Tracing (XST) attacks.
+- Directory indexing may expose sensitive files.
+- Missing security headers reduce browser-side protections.

@@ -1,0 +1,8 @@
+Kali Linux (Attacker)
+        |
+        |
+-------------------------
+|                       |
+|                       |
+Windows 11        Metasploitable 2
+(Target)          (Vulnerable Target)

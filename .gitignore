@@ -1,0 +1,19 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Large binary files (optional — remove if you want pcap in repo)
+# *.pcapng
+# *.pcap

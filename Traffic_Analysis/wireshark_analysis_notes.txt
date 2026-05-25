@@ -1,0 +1,56 @@
+# ============================================================
+# VAPT Project — Wireshark Traffic Analysis Notes
+# Capture file: meta.pcapng
+# Interface: eth0
+# Date: 2026-05-24 04:39 AM
+# ============================================================
+
+CAPTURE STATISTICS
+------------------
+Total packets: 2,493
+Capture file: meta.pcapng
+Interface: eth0
+
+FILTER 1 — SYN Scan Detection
+Filter: tcp.flags.syn == 1 && tcp.flags.ack == 0
+Packets displayed: 1,003 (42.4%)
+Observation: Nmap SYN scan signature — all packets from 192.168.128.164
+             to 192.168.128.166 with only SYN flag set (0x002)
+Frame 302 dissection:
+  Source Port: 38942
+  Destination Port: 80
+  Flags: 0x002 (SYN only)
+  Window: 1024 (Nmap fingerprint)
+  MSS: 1460
+
+FILTER 2 — All Target Traffic
+Filter: ip.addr == 192.168.128.166
+Packets displayed: 2,043 (85.9%)
+Observation: Bidirectional attack traffic visible
+  - SYN from attacker (probes)
+  - RST,ACK from target (closed ports)
+  - SYN,ACK from target (open ports confirmed)
+  - NetBIOS Browser Election broadcasts to .255
+
+FILTER 3 — FTP Session
+Filter: tcp.stream eq 1003
+Packets displayed: 20 (0.8%)
+TCP Stream: 4 client packets, 7 server packets, 8 turns, 227 bytes total
+FTP Exchange (plain text):
+  Server -> Client: 220 (vsFTPd 2.3.4)
+  Client -> Server: USER anonymous      ← CREDENTIAL IN PLAIN TEXT
+  Server -> Client: 331 Please specify the password.
+  Client -> Server: PASS anonymous      ← PASSWORD IN PLAIN TEXT
+  Server -> Client: 230 Login successful.
+  Client -> Server: SYST
+  Server -> Client: 215 UNIX Type: L8
+  Client -> Server: FEAT
+  Server -> Client: 211-Features: EPRT EPSV MDTM PASV REST STREAM SIZE TVFS UTF8
+
+SECURITY IMPLICATIONS
+---------------------
+1. Nmap SYN scan fully visible — any IDS would detect immediately
+2. FTP credentials transmitted in plain text — interceptable by any sniffer
+3. SYN-ACK responses confirm open ports — port 80, 21 confirmed
+4. vsFTPd 2.3.4 banner visible in packet payload
+5. NetBIOS broadcasts reveal hostname and services

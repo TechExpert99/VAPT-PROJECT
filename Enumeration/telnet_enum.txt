@@ -1,0 +1,23 @@
+TELNET ENUMERATION
+
+Target:
+192.168.128.166
+
+Command:
+telnet 192.168.128.166
+
+Credentials Used:
+Username: msfadmin
+Password: msfadmin
+
+Objective:
+Test Telnet authentication security.
+
+Findings:
+- Telnet service accessible remotely
+- Default credentials successfully authenticated
+- Remote shell access obtained
+
+Security Risks:
+- Telnet transmits credentials in plaintext.
+- Default credentials create critical authentication vulnerabilities.

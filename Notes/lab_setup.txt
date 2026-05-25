@@ -1,0 +1,23 @@
+STEP 1 — LAB SETUP AND ENVIRONMENT CONFIGURATION
+
+Objective:
+To create a secure virtual lab environment for performing vulnerability assessment and penetration testing activities.
+
+Virtual Machines Used:
+1. Kali Linux
+2. Metasploitable 2
+3. Windows 11 Home
+
+VMware Network Type:
+NAT Network
+
+IP Address Configuration:
+Kali Linux        : 192.168.128.164
+Windows 11 Home   : 192.168.128.162
+Metasploitable 2  : 192.168.128.166
+
+Connectivity Verification:
+Successful ICMP communication was established between all virtual machines using ping tests.
+
+Observations:
+Initially, Windows Firewall blocked ICMP echo requests. Firewall settings were modified to allow ping communication during controlled testing.

