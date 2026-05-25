@@ -451,8 +451,8 @@ Professional documentation produced for all 8 phases with:
 
 ## 👤 Author
 
-**[Your Full Name]**
-[Your College / University]
+**[NITHIN NAYAKA V N]**
+[Dr. Ambedkar Institute Of Technology]
 Cybersecurity Internship Project — 2026
 
 ---
